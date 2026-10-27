@@ -1,0 +1,129 @@
+:root {
+    --couleur-titre: #00ffcc;
+    --couleur-lien: #fd9be7;
+    --couleur-texte: #ffffff;
+    --couleur-texte-fort: #ff3b30;
+    --couleur-texte-secondaire: #b8c7d9;
+    --couleur-fond: rgba(0, 0, 0, 0.72);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #10151c url("img/bg.webp") center / cover fixed no-repeat;
+    margin: 20px;
+    color: var(--couleur-texte);
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: var(--couleur-titre);
+}
+
+h1 a, h2 a {
+    color: var(--couleur-lien);
+    text-decoration: none;
+    font-size: 0.65em;
+    margin-left: 12px;
+}
+
+h1 a:hover, h2 a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: var(--couleur-texte-fort);
+}
+
+em {
+    color: var(--couleur-texte-secondaire);
+}
+
+.presentation {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--couleur-fond);
+    border-radius: 12px;
+}
+
+.presentation > a {
+    flex: 0 1 430px;
+}
+
+.presentation > a img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.presentation p,
+body > p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+body > p {
+    background: var(--couleur-fond);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texte {
+    flex: 1;
+    min-width: 0;
+}
+
+.texte p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+@media (max-width: 700px) {
+    body {
+        margin: 12px;
+    }
+
+    .presentation {
+        flex-direction: column;
+        padding: 14px;
+    }
+
+    .presentation > a,
+    .images {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .presentation p,
+    body > p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    h1 a, h2 a {
+        display: inline-block;
+        margin: 8px 0 0;
+    }
+}
